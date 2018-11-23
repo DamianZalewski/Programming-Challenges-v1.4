@@ -6,11 +6,52 @@
     <title>[01] Higher or lower / heads and tails</title>
     <meta name="description" content="">
     <style>
-
+        .title {
+            font-size: 36px;
+            text-align: center;
+            margin-top:3rem;
+        }
+        
+        .game_card_container {
+            margin-left:auto;
+            margin-right:auto;
+            text-align: center;
+        }
+        
+        .game_card {
+            width:400px;
+            height:400px;
+            display: inline-block;
+            background-color:green;
+            margin:30px;
+            box-sizing: border-box;
+        }
+        
+        .game_card_container:first-child {
+            border:5px solid blue;
+        }
+        
+        .game_card:second-of-type {
+            border:5px solid red;
+        }
+        
+        .game_card:hover {
+            border-color:black;
+            cursor:pointer;
+        }
     </style>
 </head>
 <body>
-   
+    <div class="title">Choose a game</div>
+    <div class="game_card_container">
+        <a href="higherOrLower.html">
+            <div class="game_card"></div>
+        </a>
+        <a href="#">
+            <div class="game_card"></div>
+        </a>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
