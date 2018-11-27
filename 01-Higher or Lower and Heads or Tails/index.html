@@ -6,10 +6,17 @@
     <title>[01] Higher or lower / heads and tails</title>
     <meta name="description" content="">
     <style>
+        body {
+            background-color:#151517;    
+        }
+        
         .title {
             font-size: 36px;
             text-align: center;
             margin-top:3rem;
+            color:#1414a8;
+            font-weight: bold;
+            letter-spacing: 5px;
         }
         
         .game_card_container {
@@ -25,24 +32,17 @@
             background-color:green;
             margin:30px;
             box-sizing: border-box;
-        }
-        
-        .game_card_container:first-child {
-            border:5px solid blue;
-        }
-        
-        .game_card:second-of-type {
-            border:5px solid red;
+            border:4px solid black;
         }
         
         .game_card:hover {
-            border-color:black;
+            border-color:#0a0aa0;
             cursor:pointer;
         }
     </style>
 </head>
 <body>
-    <div class="title">Choose a game</div>
+    <div class="title">CHOOSE A GAME</div>
     <div class="game_card_container">
         <a href="higherOrLower.html">
             <div class="game_card"></div>
