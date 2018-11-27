@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>[01] Higher or lower / heads and tails</title>
+    <meta name="description" content="">
+    <style>
+        body {
+            background-color:#151517;    
+        }
+        
+        .title {
+            font-size: 36px;
+            text-align: center;
+            margin-top:3rem;
+            color:#951111;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+        
+        .back-container {
+            position:absolute;
+            bottom: 35px;
+            left: 35px;
+            text-decoration: none;
+        }
+        
+        .container {
+            border-radius: 5px;
+            border:4px solid #951111;
+            color:#951111;
+        }
+        
+        .back-button {
+            font-weight: bold;
+            font-size:24px;    
+        }
+        
+        .wrapper {
+            width:80%;
+            height:300px;
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:10px;
+            box-sizing: border-box;
+        }
+        
+        .menu {
+            border-right: 4px solid #951111;
+            width:40%;
+            height:100%;
+            display:inline-block;
+            box-sizing: border-box;
+            padding:5px 5px;
+            vertical-align: top;
+        }   
+        
+        .arrows {
+            border-right: 4px solid #951111;
+            width:20%;
+            height:100%;
+            display:inline-block;
+            box-sizing: border-box;
+            padding:5px 5px;
+            vertical-align: top;
+
+        }
+        
+        .card {
+            width:20%;
+            height:100%;
+            display:inline-block;
+            box-sizing: border-box;
+            padding:5px 5px;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">HIGHER OR LOWER</div>
+    <div class="wrapper container">
+        <div class="menu">
+            <div class="menu-item">SCORE: 0</div>
+            <div class="menu-item">Cards remain: 0</div>
+            <div class="menu-item">New game</div>
+        </div>
+        <div class="arrows">
+            <div class="arrow-up">up</div>
+            <div class="arrow-down">down</div>
+        </div>
+        <div class="card">
+            card
+        </div>
+    </div>
+    <a href="index.html" class="back-container">
+        <div class="back-button container">
+            BACK
+        </div>
+    </a>
+    <script src="higherOrLower.js"></script>
+</body>
+</html>
