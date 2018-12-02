@@ -77,19 +77,19 @@
         }
     </style>
 </head>
-<body>
+<body onLoad="gameLogic()">
     <div class="title">HIGHER OR LOWER</div>
     <div class="wrapper container">
         <div class="menu">
-            <div class="menu-item">SCORE: 0</div>
-            <div class="menu-item">Cards remain: 0</div>
-            <div class="menu-item">New game</div>
+            <div class="menu-item" id="gameScore">SCORE: 0</div>
+            <div class="menu-item" id="cardsRemain">Cards remain: 0</div>
+            <div class="menu-item" onClick="startNewGame()">New game</div>
         </div>
         <div class="arrows">
             <div class="arrow-up">up</div>
             <div class="arrow-down">down</div>
         </div>
-        <div class="card">
+        <div class="card" id="actualCard">
             card
         </div>
     </div>
