@@ -75,6 +75,10 @@
             padding:5px 5px;
             vertical-align: top;
         }
+        
+        #actualCard {
+            width:100%;
+        }
     </style>
 </head>
 <body onLoad="gameLogic()">
@@ -86,11 +90,11 @@
             <div class="menu-item" onClick="startNewGame()">New game</div>
         </div>
         <div class="arrows">
-            <div class="arrow-up">up</div>
-            <div class="arrow-down">down</div>
+            <div class="arrow-up" onClick="handleUpArrowClick();">up</div>
+            <div class="arrow-down" onClick="handleDownArrowClick();">down</div>
         </div>
-        <div class="card" id="actualCard">
-            card
+        <div class="card">
+            <img id="actualCard" src="assets/higherOrLower/purple_back.jpg" />
         </div>
     </div>
     <a href="index.html" class="back-container">
