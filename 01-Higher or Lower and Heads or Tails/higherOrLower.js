@@ -1,5 +1,5 @@
 let score = 0;
-let cards = ['2C','2D','2H','2S',
+let originalCards = ['2C','2D','2H','2S',
              '3C','3D','3H','3S',
              '4C','4D','4H','4S',
              '5C','5D','5H','5S',
@@ -12,10 +12,12 @@ let cards = ['2C','2D','2H','2S',
              'QC','QD','QH','QS',
              'KC','KD','KH','KS',
              'AC','AD','AH','AS'];
-let maxCards = 52;
+let cards = [];
+originalCards.forEach((e)=>{cards.push(e)});
+let maxCards = cards.length;
 let remainCards = maxCards;
 let actualCard = "";
-let bet = "";
+let isGameStarted = false;
 
 gameLogic = () => {
     drawRemainCards();
@@ -33,6 +35,13 @@ drawScore = () => {
 }
 
 startNewGame = () => {
+    if(isGameStarted) {
+        cards = [];
+        originalCards.forEach((e)=>{cards.push(e)});
+        remainCards = maxCards;
+        
+    }
+    isGameStarted = true;
     let randomCard = Math.floor(Math.random() * cards.length);
     actualCard = cards[randomCard] + ".jpg";
     cards.splice(randomCard-1,1);
@@ -46,9 +55,8 @@ drawCard = () => {
     cardImg.src = "assets/higherOrLower/"+actualCard;
 }
 
-handleUpArrowClick = () => {
-    bet = "up";
-    console.log(bet);
+handleArrowClick = (position) => {
+    if(!isGameStarted) return 0;
     let previousCard = actualCard;
     let randomCard = Math.floor(Math.random() * cards.length);
     actualCard = cards[randomCard] + ".jpg";
@@ -57,29 +65,25 @@ handleUpArrowClick = () => {
 
     previousValue = checkValue(previousCard);
     actualValue = checkValue(actualCard);
-    if(actualValue >= previousValue) score += 100; else score -= 100;
+    if(position === "up") {
+            if(actualValue >= previousValue) score += 100; else score -= 100;
+    } else if(position === "down"){
+        if(actualValue < previousValue) score += 100; else score -= 100;
+    }
+    
+    if(remainCards === 0) {
+        isGameStarted = false;
+        drawGameOver();
+    }
     
     drawCard();
     drawRemainCards();
     drawScore();
 }
 
-handleDownArrowClick = () => {
-    bet = "down";
-    console.log(bet);
-    let previousCard = actualCard;
-    let randomCard = Math.floor(Math.random() * cards.length);
-    actualCard = cards[randomCard] + ".jpg";
-    cards.splice(randomCard-1,1);
-    remainCards = cards.length;
-
-    previousValue = checkValue(previousCard);
-    actualValue = checkValue(actualCard);
-    if(actualValue <= previousValue) score += 100; else score -= 100;
-    
-    drawCard();
-    drawRemainCards();
-    drawScore();
+drawGameOver = () => {
+    let gameOverDiv = document.getElementById("gameOver");
+    gameOverDiv.innerHTML = "Game over!";
 }
 
 checkValue = (card) => {

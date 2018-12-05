@@ -28,7 +28,6 @@
         
         .container {
             border-radius: 5px;
-            border:4px solid #951111;
             color:#951111;
         }
         
@@ -47,17 +46,16 @@
         }
         
         .menu {
-            border-right: 4px solid #951111;
             width:40%;
             height:100%;
             display:inline-block;
             box-sizing: border-box;
             padding:5px 5px;
             vertical-align: top;
+            position:relative;
         }   
         
         .arrows {
-            border-right: 4px solid #951111;
             width:20%;
             height:100%;
             display:inline-block;
@@ -76,8 +74,20 @@
             vertical-align: top;
         }
         
-        #actualCard {
+        .arrow-button {
             width:100%;
+            height:50%;
+        }
+        
+        #actualCard {
+            height:100%;
+        }
+        
+        .new-game-button {
+            width:90%;
+            height:50px;
+            position: absolute;
+            bottom: 0;
         }
     </style>
 </head>
@@ -85,13 +95,15 @@
     <div class="title">HIGHER OR LOWER</div>
     <div class="wrapper container">
         <div class="menu">
-            <div class="menu-item" id="gameScore">SCORE: 0</div>
+                <div class="menu-item" id="gameScore">SCORE:</div>
             <div class="menu-item" id="cardsRemain">Cards remain: 0</div>
-            <div class="menu-item" onClick="startNewGame()">New game</div>
+                        <div class="menu-item" id="gameOver"></div>
+
+            <button class="new-game-button" onClick="startNewGame()">New game</button>
         </div>
         <div class="arrows">
-            <div class="arrow-up" onClick="handleUpArrowClick();">up</div>
-            <div class="arrow-down" onClick="handleDownArrowClick();">down</div>
+            <button class="arrow-button" onClick="handleArrowClick('up');">up</button>
+            <button class="arrow-button" onClick="handleArrowClick('down');">down</button>
         </div>
         <div class="card">
             <img id="actualCard" src="assets/higherOrLower/purple_back.jpg" />
