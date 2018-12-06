@@ -5,105 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>[01] Higher or lower / heads and tails</title>
     <meta name="description" content="">
-    <style>
-        body {
-            background-color:#151517;    
-        }
-        
-        .title {
-            font-size: 36px;
-            text-align: center;
-            margin-top:3rem;
-            color:#951111;
-            font-weight: bold;
-            letter-spacing: 5px;
-        }
-        
-        .back-container {
-            position:absolute;
-            bottom: 35px;
-            left: 35px;
-            text-decoration: none;
-        }
-        
-        .container {
-            border-radius: 5px;
-            color:#951111;
-        }
-        
-        .back-button {
-            font-weight: bold;
-            font-size:24px;    
-        }
-        
-        .wrapper {
-            width:80%;
-            height:300px;
-            margin-left:auto;
-            margin-right:auto;
-            margin-top:10px;
-            box-sizing: border-box;
-        }
-        
-        .menu {
-            width:40%;
-            height:100%;
-            display:inline-block;
-            box-sizing: border-box;
-            padding:5px 5px;
-            vertical-align: top;
-            position:relative;
-        }   
-        
-        .arrows {
-            width:20%;
-            height:100%;
-            display:inline-block;
-            box-sizing: border-box;
-            padding:5px 5px;
-            vertical-align: top;
-
-        }
-        
-        .card {
-            width:20%;
-            height:100%;
-            display:inline-block;
-            box-sizing: border-box;
-            padding:5px 5px;
-            vertical-align: top;
-        }
-        
-        .arrow-button {
-            width:100%;
-            height:50%;
-        }
-        
-        #actualCard {
-            height:100%;
-        }
-        
-        .new-game-button {
-            width:90%;
-            height:50px;
-            position: absolute;
-            bottom: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/higherOrLower.css" />
 </head>
 <body onLoad="gameLogic()">
     <div class="title">HIGHER OR LOWER</div>
-    <div class="wrapper container">
+    <div class="wrapper">
         <div class="menu">
-                <div class="menu-item" id="gameScore">SCORE:</div>
-            <div class="menu-item" id="cardsRemain">Cards remain: 0</div>
-                        <div class="menu-item" id="gameOver"></div>
+            <div class="menu-row">
+                <div class="menu-item">Score</div>
+                <input type="text" readonly="true" id="gameScore" value="0">
+            </div>
+            <div class="menu-row">
+                <div class="menu-item">Cards remain</div>
+                <input type="text" readonly="true" id="cardsRemain" value="0" />
+            </div>
+            <div class="menu-item" id="gameOver"></div>
 
             <button class="new-game-button" onClick="startNewGame()">New game</button>
         </div>
         <div class="arrows">
-            <button class="arrow-button" onClick="handleArrowClick('up');">up</button>
-            <button class="arrow-button" onClick="handleArrowClick('down');">down</button>
+            <button class="arrow-button" onClick="handleArrowClick('up');">Higher!</button>
+            <button class="arrow-button" onClick="handleArrowClick('down');">Lower!</button>
         </div>
         <div class="card">
             <img id="actualCard" src="assets/higherOrLower/purple_back.jpg" />

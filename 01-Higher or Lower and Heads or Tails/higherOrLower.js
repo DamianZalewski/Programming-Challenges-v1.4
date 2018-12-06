@@ -25,16 +25,18 @@ gameLogic = () => {
 }
 
 drawRemainCards = () => {
-    let scoreDiv = document.getElementById("cardsRemain");
-    scoreDiv.innerHTML = "Cards remain: " + remainCards;
+    let scoreButton = document.getElementById("cardsRemain");
+    scoreButton.value = remainCards;
 }
 
 drawScore = () => {
-    let scoreDiv = document.getElementById("gameScore");
-    scoreDiv.innerHTML = "Score: " + score;
+    let scoreButton = document.getElementById("gameScore");
+    scoreButton.value = score;
 }
 
 startNewGame = () => {
+    cleanGameOver();
+    score = 0;
     if(isGameStarted) {
         cards = [];
         originalCards.forEach((e)=>{cards.push(e)});
@@ -84,6 +86,11 @@ handleArrowClick = (position) => {
 drawGameOver = () => {
     let gameOverDiv = document.getElementById("gameOver");
     gameOverDiv.innerHTML = "Game over!";
+}
+
+cleanGameOver = () => {
+    let gameOverDiv = document.getElementById("gameOver");
+    gameOverDiv.innerHTML = "";
 }
 
 checkValue = (card) => {
