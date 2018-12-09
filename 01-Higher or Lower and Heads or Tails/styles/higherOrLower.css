@@ -22,6 +22,8 @@ body {
 .back-button {
     font-weight: bold;
     font-size:24px;    
+    text-decoration: none;
+    color:#951111;
 }
 
 .wrapper {
@@ -34,29 +36,32 @@ body {
 }
 
 .menu {
-    width:40%;
+    width:50%;
     height:100%;
     display:inline-block;
     box-sizing: border-box;
     vertical-align: top;
     position:relative;
-    margin-right:15px;
+    padding-right:2.5%;
 }   
+
+.card {
+    width:30%;
+    height:100%;
+    display:inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    text-align: center;
+    background-color:#951111;
+}
 
 .arrows {
     width:20%;
     height:100%;
+    box-sizing: border-box;
+    padding-right:2.5%;
     display:inline-block;
     position:relative;
-}
-
-.card {
-    width:20%;
-    height:100%;
-    display:inline-block;
-    box-sizing: border-box;
-    padding:5px 5px;
-    vertical-align: top;
 }
 
 .arrow-button {
@@ -66,16 +71,19 @@ body {
 
 .arrow-button:last-of-type {
     position: absolute;
+    width:87.5%;
     bottom:0;
-    left:0;
+    right:12.5%;
 }
 
 #actualCard {
-    height:100%;
+    margin-top:5%;
+    height:90%;
+    border-radius: 15px;
 }
 
 .new-game-button {
-    width:100%;
+    width:95%;
     height:50px;
     position: absolute;
     left:0;
