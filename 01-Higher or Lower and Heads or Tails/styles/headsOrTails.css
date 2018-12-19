@@ -55,6 +55,7 @@ body {
     background-color:#0a0aa0;
 }
 
+
 .arrows {
     width:20%;
     height:100%;
@@ -77,9 +78,8 @@ body {
 }
 
 #actualCard {
-    margin-top:5%;
-    height:90%;
-    border-radius: 15px;
+    margin-top: 25%;
+    max-width: 60%;
 }
 
 .new-game-button {
