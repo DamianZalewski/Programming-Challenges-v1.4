@@ -23,8 +23,8 @@ chooseCoin = () => {
 }
 
 drawCoin = () => {
-    if(actualCoin == 0) cardImg.src = "assets/headsOrTails/coin-head.png" 
-    else cardImg.src = "assets/headsOrTails/coin-tail.png" ;
+    if(actualCoin == 0) cardImg.src = "../assets/headsOrTails/coin-head.png" 
+    else cardImg.src = "../assets/headsOrTails/coin-tail.png" ;
 }
 
 

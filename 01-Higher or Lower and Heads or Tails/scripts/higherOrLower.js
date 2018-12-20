@@ -76,7 +76,7 @@ drawGameStarted = () => { gameStatusInput.value = "Game started!"; }
 
 drawGameOver = () => { gameStatusInput.value = "Game over!"; }
 
-drawCard = () => { cardImg.src = "assets/higherOrLower/"+actualCard; }
+drawCard = () => { cardImg.src = "../assets/higherOrLower/"+actualCard; }
 
 drawRemainCards = () => { cardsRemainInput.value = remainCards; }
 

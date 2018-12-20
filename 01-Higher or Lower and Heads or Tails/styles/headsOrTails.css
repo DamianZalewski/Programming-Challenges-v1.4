@@ -1,123 +1,29 @@
-body {
-    background-color:#151517;    
-    font-size:1.2rem;
-}
-
 .title {
-    font-size: 36px;
-    text-align: center;
-    margin-top:3rem;
     color:#0a0aa0;
-    font-weight: bold;
-    letter-spacing: 5px;
-}
-
-.back-container {
-    position:absolute;
-    bottom: 35px;
-    left: 35px;
-    text-decoration: none;
 }
 
 .back-button {
-    font-weight: bold;
-    font-size:24px;    
-    text-decoration: none;
     color:#0a0aa0;
 }
 
-.wrapper {
-    width:80%;
-    height:300px;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:10px;
-    box-sizing: border-box;
-}
-
-.menu {
-    width:50%;
-    height:100%;
-    display:inline-block;
-    box-sizing: border-box;
-    vertical-align: top;
-    position:relative;
-    padding-right:2.5%;
-}   
-
 .card {
-    width:30%;
-    height:100%;
-    display:inline-block;
-    box-sizing: border-box;
-    vertical-align: top;
-    text-align: center;
     background-color:#0a0aa0;
-}
-
-
-.arrows {
-    width:20%;
-    height:100%;
-    box-sizing: border-box;
-    padding-right:2.5%;
-    display:inline-block;
-    position:relative;
-}
-
-.arrow-button {
-    width:100%;
-    height:45%;
-}
-
-.arrow-button:last-of-type {
-    position: absolute;
-    width:87.5%;
-    bottom:0;
-    right:12.5%;
 }
 
 #actualCard {
     margin-top: 25%;
+    height:initial;
     max-width: 60%;
 }
 
-.new-game-button {
-    width:95%;
-    height:50px;
-    position: absolute;
-    left:0;
-    bottom:0;
-}
-
-.menu-item {
-    color:white;
-    display:inline-block;
-    width:50%;
-}
-
 .menu-row {
-    width:100%;
     background-color:#0a0aa0;
-    margin-bottom:1rem;
-    box-sizing: border-box;
-    padding:15px 15px;
 }
 
 button {
     background-color:#0a0aa0;
-    color:white;
-    border:none;
-    box-sizing: border-box;
-    font-size:1.5rem;
 }
 
 button:hover {
     background-color: #00007e;
-    cursor: pointer;    
-}
-
-input {
-    width:40%;
-    display:inline-block;
 }
