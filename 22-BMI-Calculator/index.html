@@ -12,31 +12,30 @@
         BMI CALCULATOR
     </div>
     <div id="formWrapper">
-        <form>
          <div>
           Gender:
             <label>
-                Male:<input type="radio" name="genderInput"/>
+                Male:<input value="male" type="radio" name="genderInput" checked/>
             </label>
             <label>
-                Female:<input type="radio" name="genderInput"/>
+                Female:<input value="female" type="radio" name="genderInput"/>
             </label>
           </div>
           <div>
            Height:
-           <input type="range" name="heightInput" min="100" max="250" value="175" />
+           <input type="range" name="heightInput" min="100" max="250" value="175" onchange="changeHeightValue()" />
            <span id="heightValue"></span>
           </div>
           <div>
            Weight:
-           <input type="range" name="weightInput" min="30" max="250" value="135" />
+           <input type="range" name="weightInput" min="30" max="250" value="135" onchange="changeWeightValue()" />
            <span id="weightValue"></span>
           </div>
-          <input type="submit" value="Check BMI" />
-        </form>
+        <button onclick="calculateBMI()" >Check BMI</button>
     </div>
     <div id="result">
-        ok
+
     </div>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
