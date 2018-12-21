@@ -8,6 +8,35 @@
     <link rel="stylesheet" href="styles/index.css" />
 </head>
 <body>
-  
+    <div id="header">
+        BMI CALCULATOR
+    </div>
+    <div id="formWrapper">
+        <form>
+         <div>
+          Gender:
+            <label>
+                Male:<input type="radio" name="genderInput"/>
+            </label>
+            <label>
+                Female:<input type="radio" name="genderInput"/>
+            </label>
+          </div>
+          <div>
+           Height:
+           <input type="range" name="heightInput" min="100" max="250" value="175" />
+           <span id="heightValue"></span>
+          </div>
+          <div>
+           Weight:
+           <input type="range" name="weightInput" min="30" max="250" value="135" />
+           <span id="weightValue"></span>
+          </div>
+          <input type="submit" value="Check BMI" />
+        </form>
+    </div>
+    <div id="result">
+        ok
+    </div>
 </body>
 </html>
