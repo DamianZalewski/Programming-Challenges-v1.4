@@ -4,7 +4,9 @@ let genderInput = document.getElementsByName("genderInput");
 
 let heightValue = document.getElementById("heightValue");
 let weightValue = document.getElementById("weightValue");
-let result = document.getElementById("result");
+let bmiValueInput = document.getElementById("bmiValue");
+let bmiStatusInput = document.getElementById("bmiStatus");
+let bodyImageDiv = document.getElementById("bodyImage");
 
 let bmiValue = 0;
 let bmiText = "";
@@ -23,11 +25,10 @@ calculateBMI = (e) => {
     if(bmiValue >= 18.5 && bmiValue < 25) bmiText = "Normal weight"; else
     if(bmiValue >= 25 && bmiValue < 30) bmiText = "Overweight"; else
     if(bmiValue >= 30) bmiText = "Obesity";
-    result.innerHTML = "BMI: " + Math.floor(bmiValue) + "<br /> Text: " + bmiText + " <br /> ";
+    bmiValueInput.value = Math.floor(bmiValue);
+    bmiStatusInput.value = bmiText;
     
-    let bodyImage = document.createElement("img");
-    bodyImage.src = checkBodyImage();
-    result.append(bodyImage);
+    bodyImageDiv.innerHTML = "<img width='60%' src='"+checkBodyImage()+"' alt='body image' />";
 }
 
 checkBodyImage = () => {

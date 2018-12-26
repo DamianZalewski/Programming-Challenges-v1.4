@@ -23,6 +23,20 @@ body {
     border-bottom:5px solid #005555;
 }
 
+#formTitle {
+    text-align: center;
+}
+
+.radioInput {
+    padding-left:2rem;
+    display:block;
+}
+
+.rangeLabel {
+    display:inline-block;
+    width:20%;
+}
+
 #formWrapper {
     background-color:#059d9d;
     display:inline-block;
@@ -31,7 +45,6 @@ body {
     margin-right:5vw;
     margin-top:5vh;
     vertical-align: top;
-    text-align: center;
     -webkit-box-shadow: 10px 10px 0px -3px #005555;
     -moz-box-shadow: 10px 10px 0px -3px #005555;
     box-shadow: 10px 10px 0px -3px #005555;
@@ -55,13 +68,31 @@ body {
 
 #checkButton {
     background-color:#005555;
-    border:none;
     color:#fff;
     width:80%;
     padding:5px;
+    margin:auto;
+    text-align: center;
+    margin-top:1rem;
+    font-size:1rem;
 }
 
 #checkButton:hover {
     cursor: pointer;
     background-color:#003636;
 }
+
+#bodyImage, #infoBox {
+    display:inline-block;
+    width:49%;
+    padding:0px;
+    margin:0px;
+    height:100%;
+    vertical-align: top;
+}
+
+#bodyImage {
+    text-align: right;
+}
+
+
