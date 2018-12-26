@@ -46,6 +46,5 @@ checkBodyImage = () => {
     return "assets/"+pic+".jpg";
 }
 
-
 changeHeightValue();
 changeWeightValue();

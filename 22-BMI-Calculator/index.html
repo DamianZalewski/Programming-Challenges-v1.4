@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible"  content="IE=edge">
     <title>[22] BMI Calculator</title>
     <meta name="description" content="BMI Calculator">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css" />
 </head>
 <body>
@@ -12,6 +13,8 @@
         BMI CALCULATOR
     </div>
     <div id="formWrapper">
+        Check your BMI!
+        <hr />
          <div>
           Gender:
             <label>
@@ -31,7 +34,7 @@
            <input type="range" name="weightInput" min="30" max="250" value="135" onchange="changeWeightValue()" />
            <span id="weightValue"></span>
           </div>
-        <button onclick="calculateBMI()" >Check BMI</button>
+        <button id="checkButton" onclick="calculateBMI()" >Check BMI</button>
     </div>
     <div id="result">
     </div>
