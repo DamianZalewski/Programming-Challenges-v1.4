@@ -14,9 +14,9 @@ init = () => {
     startPoint = points[0];
     counter = 0;
     quantity = 0;
-    ctx.fillStyle = "lightgray";
+    ctx.fillStyle = "#e80a79";
     ctx.fillRect(0, 0, cw, ch);
-    ctx.fillStyle = "red";
+    ctx.fillStyle = "#fff";
     ctx.fillRect(points[0][0],points[0][1],1,1);
     ctx.fillRect(points[1][0],points[1][1],1,1);
     ctx.fillRect(points[2][0],points[2][1],1,1);
@@ -34,7 +34,7 @@ drawTriangle = () => {
     counter++;
     if(quantity<counter) clearInterval(triangleInterval);
     
-}
+}   
 
 start = () => {
     quantity = document.getElementById('quantity').value;
@@ -49,9 +49,11 @@ reset = () => {
 openPage = () => {
     let wrapper = document.getElementById("wrapper");
     let menuContainer = document.getElementById("menuContainer");
+    let informationContainer = document.getElementById("informationContainer");
     let canvasContainer = document.getElementById("canvasContainer");
     wrapper.classList.add("wrapperUp");
     menuContainer.classList.add("menuAnimation");
+    informationContainer.classList.add("informationAnimation");
     canvasContainer.classList.add("canvasAnimation");
 }
 

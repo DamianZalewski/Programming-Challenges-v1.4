@@ -1,6 +1,7 @@
 body {
     margin:0;
     padding:0;
+    color:#ededed;
 }
 
 #wrapper {
@@ -12,7 +13,6 @@ body {
     z-index: 2;
     text-align: center;
     padding-top:40vh;
-    color:#fff;
     background: rgba(255,93,177,1);
     background: -moz-linear-gradient(left, rgba(255,93,177,1) 0%, rgba(239,1,124,1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,93,177,1)), color-stop(100%, rgba(239,1,124,1)));
@@ -29,6 +29,7 @@ body {
     height:100vh;
     left:0;
     top:0;
+    background: #808080;
 }
 
 #menuContainer {
@@ -37,15 +38,20 @@ body {
     position:absolute;
     top:15vh;
     left: -30vw;
+    border-right: 1px solid #b10058;
+    border-bottom: 1px solid #b10058;
 }
 
 #canvasContainer {
     position:absolute;
+    background-color:#e80a79;
     text-align: right;
     padding:0;
     top:15vh;
     right:-60vw;
     width:60vw;
+    border-left: 1px solid #b10058;
+    border-bottom: 1px solid #b10058;
 }
 
 .wrapperUp {
@@ -61,4 +67,25 @@ body {
 .canvasAnimation {
     transform: translateX(-60vw);
     transition: transform 3s ease-in-out;
+}
+
+#informationContainer {
+    background-color:#e80a79;
+    width:30vw;
+    position:absolute;
+    top:40vh;
+    left: -30vw;
+    border-right: 1px solid #b10058;
+    border-bottom: 1px solid #b10058;
+}
+
+.informationAnimation {
+    transform: translateX(30vw);
+    transition: transform 2s ease-in-out;
+}
+
+.headerClass {
+    background: #b10058;
+    text-align: center;
+    padding:10px;
 }

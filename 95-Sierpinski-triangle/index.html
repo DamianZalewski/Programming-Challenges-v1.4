@@ -13,14 +13,20 @@
   </div>
   <div id="content">
    <div id="menuContainer">
-       <div>Sierpinski triangle</div>
-       <div>Quantity <input id="quantity" type="number" min="1000" value="1000"/></div>
+       <div class="headerClass">Sierpinski triangle</div>
+       <div>Quantity <input id="quantity" type="number" min="1000" value="100000"/></div>
        <div>Color</div>
        <div onclick="start()">Start</div>
        <div onclick="reset()">Reset</div>
    </div>
-   
+   <div id="informationContainer">
+       <div class="headerClass">Informations</div>
+       <p>
+           The Sierpinski triangle (also with the original orthography Sierpiński), also called the Sierpinski gasket or the Sierpinski sieve, is a fractal and attractive fixed set with the overall shape of an equilateral triangle, subdivided recursively into smaller equilateral triangles.
+       </p>
+   </div>
    <div id="canvasContainer">
+   <div class="headerClass">Canvass</div>
     <canvas id="canvas" width="800" height="600">
         Twoja przeglądarka nie obsługuje elementu Canvas.
     </canvas>
