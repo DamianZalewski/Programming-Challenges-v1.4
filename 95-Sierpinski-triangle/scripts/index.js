@@ -1,4 +1,5 @@
 let canvas = document.getElementById('canvas');
+let canvasContainer = document.getElementById('canvasContainer');
 let ctx = canvas.getContext('2d');
 let cw = 800;
 let ch = 600;
@@ -9,12 +10,13 @@ let counter = 0;
 let quantity = 0;
 
 
+
 init = () => {
     points = [[cw/2,10],[10,ch-10],[cw-10,ch-10]];
     startPoint = points[0];
     counter = 0;
     quantity = 0;
-    ctx.fillStyle = "#e80a79";
+    ctx.fillStyle = "#000000";
     ctx.fillRect(0, 0, cw, ch);
     ctx.fillStyle = "#fff";
     ctx.fillRect(points[0][0],points[0][1],1,1);
