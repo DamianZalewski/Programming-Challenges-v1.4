@@ -35,8 +35,8 @@ drawTriangle = () => {
     ];
     startPoint = [destination[0], destination[1]];
     ctx.fillRect(destination[0],destination[1],1,1);
-    counter++;
     counterInput.value = counter;
+    counter++;
     if(quantity<counter) clearInterval(triangleInterval);
     
 }   
@@ -61,6 +61,6 @@ openPage = () => {
     let leftMenu = document.getElementById("leftMenu");
     let canvasContainer = document.getElementById("canvasContainer");
     wrapper.classList.add("wrapperUp");
-    menuContainer.classList.add("leftMenuAnimation");
+    leftMenu.classList.add("leftMenuAnimation");
     canvasContainer.classList.add("canvasAnimation");
 }

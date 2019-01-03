@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,48 +11,51 @@
 </head>
 
 <body onload="init()">
-    <div id="wrapper" onclick="openPage()">
-        <h1>Sierpinski triangle</h1>
-        <div class="bottomArrow"></div>
-    </div>
-    <div id="content">
-        <div class="headerClass">Sierpinski Triangle</div>
-        <div id="leftMenu">
-            <div id="menuContainer">
-                <div class="headerClass">Menu</div>
-                <div class="center tc pa1">
-                    <div class="w40 tr">Dots quantity </div>
-                    <div class="w40 tl"><input id="quantity" type="number" min="1000" value="100000" /></div>
-                </div>
-                <div class="center tc pa1">
-                    <div class="w40 tr">Dots counter </div>
-                    <div class="w40 tl"><input id="counter" type="text" value="0" disabled/></div>
-                </div>
-                <div class="buttonClass" id="startButton" onclick="start()">Start</div>
-                <div class="buttonClass" onclick="reset()">Reset</div>
-            <div id="informationContainer">
-                <div class="headerClass">Informations</div>
-                
-                <figure>
-                    <img src="assets/sierpinski.jpg" />
-                    <figcaption>Wacław Sierpiński</figcaption>
-                </figure>
-                <p>
-                    The Sierpinski triangle (also with the original orthography Sierpiński), also called the Sierpinski gasket or the Sierpinski sieve, is a fractal and attractive fixed set with the overall shape of an equilateral triangle, subdivided recursively into smaller equilateral triangles.
-                </p>
-            </div>
-                        </div>
-
+    <div class="overflowHidden">
+        <div id="wrapper" onclick="openPage()">
+            <h1>Sierpinski triangle</h1>
+            <div class="bottomArrow"></div>
         </div>
-        
+        <div id="content">
+            <div class="headerClass">Sierpinski Triangle</div>
+            <div id="canvasContainer">
+                <div class="headerClass">Canvas</div>
+                <canvas id="canvas">Your browser does not support canvas element.</canvas>
+            </div>
+            <div id="leftMenu">
+                <div id="menuContainer">
+                    <div class="headerClass">Menu</div>
+                    <div class="center tc pa1">
+                        <div class="w40 tr">Dots quantity </div>
+                        <div class="w40 tl"><input id="quantity" type="number" min="1000" value="100000" /></div>
+                    </div>
+                    <div class="center tc pa1">
+                        <div class="w40 tr">Dots counter </div>
+                        <div class="w40 tl"><input id="counter" type="text" value="0" disabled/></div>
+                    </div>
+                    <div class="buttonClass" id="startButton" onclick="start()">Start</div>
+                    <div class="buttonClass" onclick="reset()">Reset</div>
+                </div>
+                <div id="menuContainer">
+                    <div class="headerClass">Informations</div>
+                    <div class="pa1">
+                        <p class="tj">
+                            The Sierpinski triangle (also with the original orthography Sierpiński), also called the Sierpinski gasket or the Sierpinski sieve, is a fractal and attractive fixed set with the overall shape of an equilateral triangle, subdivided recursively into smaller equilateral triangles.
+                        </p>
+                        <figure class="tc">
+                            <img src="assets/sierpinski.jpg" />
+                            <figcaption>Wacław Sierpiński</figcaption>
+                        </figure>
 
-        <div id="canvasContainer">
-            <div class="headerClass">Canvas</div>
-            <canvas id="canvas">
-        Twoja przeglądarka nie obsługuje elementu Canvas.
-    </canvas>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
     </div>
     <script src="scripts/index.js"></script>
 </body>
+
 </html>
