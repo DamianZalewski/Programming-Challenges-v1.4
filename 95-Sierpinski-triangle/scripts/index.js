@@ -1,22 +1,32 @@
 let canvas = document.getElementById('canvas');
-let canvasContainer = document.getElementById('canvasContainer');
-let counterInput = document.getElementById('counter');
 let ctx = canvas.getContext('2d');
 let cw = canvas.width;
 let ch = canvas.height;
+
+let counterInput = document.getElementById('counter');
+let overlay = document.getElementById("overlay");
+let leftMenu = document.getElementById("leftMenu");
+let canvasContainer = document.getElementById("canvasContainer");
+
 let triangleInterval;
-let points = [[cw/2,10],[10,ch-10],[cw-10,ch-10]];
-let startPoint = points[0];
-let counter = 0;
-let quantity = 0;
-let isStarted = false;
+let defaultPoints = [[cw/2,10],[10,ch-10],[cw-10,ch-10]];
+let defaultStartPoint = defaultPoints[0];
+let defaultCounter = 0;
+let defaultQuantity = 0;
+let defaultIsStarted = false;
+
+let points = defaultPoints;
+let startPoint = defaultStartPoint;
+let counter = defaultCounter;
+let quantity = defaultQuantity;
+let isStarted = defaultIsStarted;
 
 init = () => {
-    points = [[cw/2,10],[10,ch-10],[cw-10,ch-10]];
-    startPoint = points[0];
-    counter = 0;
-    quantity = 0;
-    isStarted = false;
+    points = defaultPoints;
+    startPoint = defaultStartPoint;
+    counter = defaultCounter;
+    quantity = defaultQuantity;
+    isStarted = defaultIsStarted;
     ctx.fillStyle = "#000000";
     ctx.fillRect(0, 0, cw, ch);
     ctx.fillStyle = "#fff";
@@ -57,10 +67,7 @@ reset = () => {
 }
 
 openPage = () => {
-    let wrapper = document.getElementById("wrapper");
-    let leftMenu = document.getElementById("leftMenu");
-    let canvasContainer = document.getElementById("canvasContainer");
-    wrapper.classList.add("wrapperUp");
+    overlay.classList.add("overlayUp");
     leftMenu.classList.add("leftMenuAnimation");
     canvasContainer.classList.add("canvasAnimation");
 }
