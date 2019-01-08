@@ -1,0 +1,65 @@
+body {
+    margin:0;
+    padding:0;
+    color:#fff;
+}
+
+.overflowHidden {
+    overflow-x: hidden;
+}
+
+.pageHeader {
+    width:100vw;
+    height:80px;
+    box-sizing: border-box;
+    background-color:#042181;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align: center;
+}
+
+.mobileMenu {
+    position: absolute;
+    top:10px;
+    right:10px;
+    width:50px;
+    text-align: center;
+}
+
+aside {
+    vertical-align: top;
+    width: 20vw;
+    display:inline-block;
+    margin:0;
+    padding:0;
+    background-color:#26272c;
+}
+
+aside header {
+    background-color:#0934c4;
+    height: 50px;
+    box-sizing: border-box;    
+    text-align: center;
+    padding-top:15px;
+}
+
+aside nav {
+    background-color:#113ed6;
+    height: 50px;
+}
+
+aside footer {
+    background-color:#1c1c1f;
+    text-align: center;
+    padding:15px 0px;
+}
+
+#canvas {
+    vertical-align: top;
+    width:78vw;
+    margin:0;
+    padding:0;
+    height:500px;
+    background-color:red;
+    display:inline-block;
+}
