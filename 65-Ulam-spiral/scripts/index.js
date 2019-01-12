@@ -1,5 +1,7 @@
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
+canvas.width = 400;
+canvas.height = 400;
 let cw = canvas.width;
 let ch = canvas.height;
 
@@ -22,6 +24,8 @@ let asideMenu = document.getElementsByTagName('aside')[0];
 
 
 const setDefault = () => {
+    ctx.fillStyle = 'black';
+    ctx.fillRect(0,0,cw,ch);
     actualPosition = [cw/2-1, ch/2-1];
     direction = 'right';
     maxCounter = 1;
@@ -56,16 +60,15 @@ const drawColorBoxes = () => {
 const drawSpiral = () => {
     ctx.fillStyle = fillColor;
     ctx.fillRect(actualPosition[0], actualPosition[1],1,1);
-    for(let i = 0;i<400;i++) {
-        for(let j = 0;j<maxCounter;j++) {
-           drawDot();
-        }
-        changeDirection(); 
-        if(directionCounter == 2) {
-            maxCounter++;
-            directionCounter = 0;
-        } else directionCounter++;
+    for(let j = 0;j<maxCounter;j++) {
+       drawDot();
     }
+    changeDirection(); 
+    if(directionCounter == 2) {
+        maxCounter++;
+        directionCounter = 0;
+    } else directionCounter++;
+    if(primeNumber<=250000 ) setTimeout(drawSpiral,1);
 }
 
 const drawDot = () => {
@@ -86,7 +89,6 @@ const drawDot = () => {
     isPrime(primeNumber) ? 
     ctx.fillRect(actualPosition[0], actualPosition[1],1,1) 
     : null;
-    
     primeNumber++;
 }
 

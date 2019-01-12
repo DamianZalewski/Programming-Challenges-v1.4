@@ -6,6 +6,15 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+a {
+    color:#7272ff;
+    text-decoration: none;
+}
+
+.hidden {
+    display:none;
+}
+
 .overflowHidden {
     width:100vw;
     overflow-x: hidden;
@@ -15,14 +24,15 @@ body {
     width:100vw;
     height:80px;
     box-sizing: border-box;
-    background-color:#042181;
-    padding-top:10px;
-    padding-bottom:10px;
+    background-color:#001045;
     text-align: center;
+    padding-top:1px;
 }
 
 .pageHeader h2 {
-    
+    box-sizing:border-box;
+    letter-spacing: 10px;
+    font-size: 32px;
 }
 
 .mobileMenu {
@@ -48,10 +58,12 @@ aside {
     box-sizing: border-box;
     margin:0;
     padding:0;
+    position: relative;
+    background-color:#222327;
 }
 
 aside header {
-    background-color:#0934c4;
+    background-color:#121933;
     height: 50px;
     box-sizing: border-box;    
     text-align: center;
@@ -59,9 +71,9 @@ aside header {
 }
 
 aside nav {
-    background-color:#113ed6;
+    background-color:#1c1c1f;
     height: 70px;
-    padding-top:10px;
+    padding-top:20px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -70,31 +82,37 @@ aside footer {
     background-color:#1c1c1f;
     text-align: center;
     padding:15px 0px;
+    position: absolute;
+    bottom: 0;
+    width:100%;
 }
 
 aside article {
     padding:15px;
+    min-height: 70vh;
     text-align: justify;
-    background-color:#26272c;
 }
 
-#canvas {
+.canvasContainer {
     vertical-align: top;
     width:80vw;
     margin:0;
     padding:0;
     height:600px;
+    text-align: center;
+    padding-top:100px;
     display:inline-block;
     box-sizing: border-box;
+    background-color:#000;
 }
 
 .colorBox {
-    width:50px;
+    width:30px;
     display:inline-block;
-    height:50px;
+    height:30px;
     margin-left:10px;
     margin-right: 10px;
-    border-radius:10px;
+    border-radius:50%;
     border: 1px solid #525252;
 }
 
@@ -103,7 +121,23 @@ aside article {
     border-color:white;
 }
 
+@media screen and (max-device-width: 1100px) {
+    .colorBox {
+        width:20px;
+        height:20px;
+        margin-top:5px;
+    }
+}
+
 @media screen and (max-device-width: 800px) {
+    body {
+        background-color:black;    
+    }
+    
+    .canvasContainer {
+        width:100vw;
+    }
+    
     .mobileMenu .hamburgerIcon {
         display:block;
     }
@@ -112,5 +146,27 @@ aside article {
         left:-40%;
         width:40vw;
         transition: all 0.5s ease-in-out;
+    }
+}
+
+@media screen and (max-device-width: 550px) {
+    aside header {
+        font-size:1.5rem;
+        height:80px;
+        padding-top:20px;
+    }
+    aside article {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-device-width: 450px) {
+    aside {
+        width:100vw;
+        left:-100vw;
+    }   
+    
+    .mobileMenu {
+        font-size:1.5rem;
     }
 }
