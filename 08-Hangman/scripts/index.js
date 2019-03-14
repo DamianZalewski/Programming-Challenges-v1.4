@@ -4,8 +4,8 @@ window.onload = function () {
     let cw = canvas.width;
     let ch = canvas.height;
     let words = ['yell','radiate','slow','ban','thunder','cakes','paint','conscious','nice','room','surround','subdued','hang','icicle','fine','afraid','wide'];
-    let actualWord = '';
-    let hiddenWord = '';
+    let actualWord = 'test';
+    let hiddenWord = '----';
     let fails = 0;
 
     drawLetters = () => {
@@ -36,10 +36,17 @@ window.onload = function () {
     
     checkKey = (key) => {
         console.log(key);
+        if (actualWord.toUpperCase().indexOf(key) > -1)
+        {
+            let index = actualWord.toUpperCase().indexOf(key);
+//            alert(actualWord.toUpperCase().indexOf(key));
+            hiddenWord = hiddenWord.substr(0, index) + key + hiddenWord.substr(index + 1);
+            console.log(hiddenWord);
+        }
     }
     
     drawLetters();
-    randomizeWord();
+//    randomizeWord();
     drawWord();
 
 };
