@@ -3,7 +3,8 @@ window.onload = function () {
     let actualWord = 'test';
     let hiddenWord = '----';
     let fails = 0;
-
+    let repeatButton = document.getElementsByClassName('repeatContainer')[0];
+    repeatButton.addEventListener('click',()=>{resetGame();});
     drawLetters = () => {
         let letterBox = document.getElementsByClassName("lettersBox")[0];
         let letter = 'A';
@@ -33,7 +34,6 @@ window.onload = function () {
     
     changeImage = () => {
         let hangmanImage = document.getElementsByClassName('hangmanImage')[0];
-        console.log(hangmanImage);
         hangmanImage.src = 'assets/hangman' + fails + '.png';
     }
     
@@ -46,8 +46,20 @@ window.onload = function () {
         return str.substr(0,index) + chr + str.substr(index+1);
     }
     
+    checkGameWon = () => {
+        isGameWon = true;
+        for(let i = 0; i < hiddenWord.length; i++) {
+            if(hiddenWord[i] == '-') isGameWon = false;
+        };
+        return isGameWon;
+    }
+    
+    resetGame = () => {
+        location.reload();
+    }
+    
     checkKey = (key) => {
-        if(fails == 7) return 0;
+        if(fails >= 7) return 0;
         let changeFlag = false;
         for(let i = 0; i < actualWord.length; i++) {
             if(actualWord[i].toUpperCase() == key){
@@ -58,13 +70,16 @@ window.onload = function () {
         if(!changeFlag) {
             fails++;
             changeImage();
+        } else {
+            if(checkGameWon()) {
+                fails = 8;
+                changeImage();
+            }
         }
         drawWord();
         removeKey(key);
     }
-    
     drawLetters();
-//    randomizeWord();
+    randomizeWord();
     drawWord();
-
 };
