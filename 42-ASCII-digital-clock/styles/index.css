@@ -13,7 +13,7 @@ body {
 }
 
 .clock {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .clockHeader {
@@ -28,5 +28,30 @@ body {
     margin-top:10rem;
     border-top:1px solid #ffd800;
     padding-top:1rem;
+}
+
+.letter {
+    display:inline-block;
+    width:20px;
+    margin: 2px 2px;
+    text-align: center;
+}
+.spaceLetter {
+    display:inline-block;
+    width:40px;
+    text-align: center;
+}
+
+@media(max-width:1150px) {
+    .clock {
+    font-size: 0.8rem;
+    }
     
+    .letter {
+    width:10px;
+    }
+    
+    .spaceLetter {
+    width:20px;
+    }
 }
