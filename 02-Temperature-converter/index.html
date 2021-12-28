@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>[02] Temperature converter</title>
+    <meta name="description" content="Programming challenges">
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+    <div class="overflowHidden">
+        <div class="fixedBox">
+            <h1>
+                Temperature converter
+            </h1>
+            <!-- Fahrenheit -->
+            <div class="temperatureBox">
+                <div class="temperatureTitle">
+                    Fahrenheit:
+                </div>
+                <div class="temperatureValue">
+                    <input type="text" placeholder="value" id="inputFahrenheit"> °F
+                </div>
+                <div class="actionBtn">
+                    <div class="btn" onClick="calculateFahrenheit()">
+                        Convert
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rankine -->
+            <div class="temperatureBox">
+                <div class="temperatureTitle">
+                    Rankine:
+                </div>
+                <div class="temperatureValue">
+                    <input type="text" placeholder="value" id="inputRankine"> °R
+                </div>
+                <div class="actionBtn">
+                    <div class="btn" onClick="calculateRankine()">
+                        Convert
+                    </div>
+                </div>
+            </div>
+
+            <!-- Celsius -->
+            <div class="temperatureBox">
+                <div class="temperatureTitle">
+                    Celsius:
+                </div>
+                <div class="temperatureValue">
+                    <input type="text" placeholder="value" id="inputCelsius"> °C
+                </div>
+                <div class="actionBtn">
+                    <div class="btn" onClick="calculateCelsius()">
+                        Convert
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kelvin -->
+            <div class="temperatureBox">
+                <div class="temperatureTitle">
+                    Kelvin:
+                </div>
+                <div class="temperatureValue">
+                    <input type="text" placeholder="value" id="inputKelvin"> °K
+                </div>
+                <div class="actionBtn">
+                    <div class="btn" onClick="calculateKelvin()">
+                        Convert
+                    </div>
+                </div>
+            </div>
+
+            <div class="resetBox">
+                <div class="resetBtn" onClick="resetForm()">
+                    RESET
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
