@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  background-color: #c7c7c7;
+}
+
+.overflowHidden {
+  max-width: 100vw;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.fixedBox {
+  min-width: 600px;
+  max-width: 90%;
+  max-height: 90%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 6px 6px 24px -11px #42445a;
+  box-shadow: 6px 6px 24px -11px #42445a;
+}
+
+.fixedBox h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+/*# sourceMappingURL=styles.css.map */
