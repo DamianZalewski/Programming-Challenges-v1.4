@@ -35,4 +35,29 @@ body{
         font-size: 1.5rem;
         margin-bottom: 2rem;
     }
+
+    .btn{
+        display: inline-block;
+        margin-top: 1rem;
+        padding:6px 24px;
+        box-sizing: border-box;
+        max-width: 100%;
+        background-color: #000;
+        color:#fff;
+        border-radius: 12px;
+
+        &:hover{
+            background-color: rgb(58, 58, 58);
+            cursor: pointer;
+        }
+    }
+
+    .resultBox{
+        font-size: 0.9rem;
+
+        #resultTextError{
+            color:rgb(182, 0, 0);
+            margin-top: 1rem;
+        }
+    }
 }

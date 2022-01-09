@@ -37,4 +37,30 @@ body {
   font-size: 1.5rem;
   margin-bottom: 2rem;
 }
+
+.fixedBox .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 6px 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 100%;
+  background-color: #000;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.fixedBox .btn:hover {
+  background-color: #3a3a3a;
+  cursor: pointer;
+}
+
+.fixedBox .resultBox {
+  font-size: 0.9rem;
+}
+
+.fixedBox .resultBox #resultTextError {
+  color: #b60000;
+  margin-top: 1rem;
+}
 /*# sourceMappingURL=styles.css.map */
